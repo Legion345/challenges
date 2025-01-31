@@ -8,6 +8,8 @@ public class Main {
 		MuplicationTable(12);
 		System.out.println();
 		Factorial(5);
+		System.out.println();
+		Exponentiation(int base, int exponent);
 	}
 
 	public static void PrintNum(int size) {
@@ -46,6 +48,21 @@ public class Main {
 			fact = i + " x " + fact;
 			product *= i;
 			System.out.println(i + "! = " + fact + " = " + product);
+		}
+	}
+	public static void Exponentiation(int base, int exponent) {
+		Scanner console = new Scanner(System.in);
+		int value = 1;
+
+		System.out.print("Base: ");
+		base = console.nextInt();
+
+		System.out.print("Exponenet: ");
+		exponent = console.nextInt();
+
+		for (int i = 1; i <= exponent; i++) {
+			value *= base;
+			System.out.println(i + "^" + exponent + " = " + value);
 		}
 	}
 }
