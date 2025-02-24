@@ -15,9 +15,9 @@ public class Main {
 		int[] numbers = { 1, 2, 3, 4, 5, 6 };
 		EvenOdd(numbers);
 		System.out.println();
-		System.out.println("The number is prime: " + isPrime(12));
+		System.out.println(isPrime(12));
 		System.out.println();
-		findHCF(100, 101);
+		findHCF(25, 30);
 	}
 
 	public static void PrintNum(int size) {
@@ -96,6 +96,7 @@ public class Main {
 	}
 
 	public static boolean isPrime(int number) {
+		System.out.println("The number " + number + " is Prime? ");
 		if (number <= 1) {
 			return false;
 		}
@@ -108,5 +109,11 @@ public class Main {
 	}
 
 	public static void findHCF(int first, int second) {
+		for (int i = Math.min(first, second) / 2; i > 1; i--) {
+			if ((first % i) == 0) {
+				first -= i;
+			}
+		}
+		System.out.println(i);
 	}
 }
